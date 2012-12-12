@@ -52,6 +52,13 @@ public:
 
 class SK_API SkDevice : public SkRefCnt {
 public:
+    /**
+     *  Construct a new device with the specified bitmap as its backend. It is
+     *  valid for the bitmap to have no pixels associated with it. In that case,
+     *  any drawing to this device will have no effect.
+     */
+    SkDevice(const SkBitmap& bitmap);
+
     SkDevice(SkCanvas*);
     /** Construct a new device, extracting the width/height/config/isOpaque values from
         the bitmap. If transferPixelOwnership is true, and the bitmap claims to own its
