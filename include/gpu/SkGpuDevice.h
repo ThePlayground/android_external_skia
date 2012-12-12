@@ -42,6 +42,11 @@ public:
                 GrRenderTarget* renderTargetOrNull);
 
     /**
+     *  New device that will render to the specified renderTarget.
+     */
+    SkGpuDevice(GrContext*, GrRenderTarget*);
+
+    /**
      * Magic value that can be passed to constructor. Causes
      * the device to infer rendertarget from underlying 3D API (e.g. GL or D3D).
      * This isn't a valid pointer, don't attempt to dereference.
