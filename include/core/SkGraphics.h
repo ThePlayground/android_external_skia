@@ -34,6 +34,13 @@ public:
     */
     static bool SetFontCacheUsed(size_t usageInBytes);
 
+    /**
+     *  For debugging purposes, this will attempt to purge the font cache. It
+     *  does not change the limit, but will cause subsequent font measures and
+     *  draws to be recreated, since they will no longer be in the cache.
+     */
+    static void PurgeFontCache();
+
     /** Return the version numbers for the library. If the parameter is not
         null, it is set to the version number.
      */
