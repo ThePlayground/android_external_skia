@@ -118,7 +118,6 @@ void SkGraphics::Init() {
 #include "SkGlyphCache.h"
 
 void SkGraphics::Term() {
-    PurgeFontCache();
     SkGraphics::SetFontCacheUsed(0);
     SkGlobals::Term();
 }
