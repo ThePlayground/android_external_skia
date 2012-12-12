@@ -25,6 +25,11 @@ SkDeviceFactory::~SkDeviceFactory() {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+SkDevice::SkDevice(const SkBitmap& bitmap) : fBitmap(bitmap) {
+    fOrigin.setZero();
+    fMetaData = NULL;
+}
+
 SkDevice::SkDevice(SkCanvas* canvas) : fCanvas(canvas), fMetaData(NULL) {
     fOrigin.setZero();
     fCachedDeviceFactory = NULL;
